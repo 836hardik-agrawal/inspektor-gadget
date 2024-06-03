@@ -56,7 +56,6 @@ func main() {
 	rootCmd.AddCommand(common.NewVersionCmd())
 
 	runtime := grpcruntime.New()
-
 	runtimeGlobalParams := runtime.GlobalParamDescs().ToParams()
 	common.AddFlags(rootCmd, runtimeGlobalParams, nil, runtime)
 	err := runtime.Init(runtimeGlobalParams)
@@ -87,7 +86,8 @@ func main() {
 	common.AddCommandsFromRegistry(rootCmd, runtime, hiddenColumnTags)
 
 	rootCmd.AddCommand(common.NewSyncCommand(runtime))
-	rootCmd.AddCommand(common.NewRunCommand(rootCmd, runtime, hiddenColumnTags))
+	rootCmd.AddCommand(common.NewRunCommand(rootCmd, runtime, hiddenColumnTags, common.CommandModeRun))
+	rootCmd.AddCommand(common.NewRunCommand(rootCmd, runtime, hiddenColumnTags, common.CommandModeAttach))
 
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
