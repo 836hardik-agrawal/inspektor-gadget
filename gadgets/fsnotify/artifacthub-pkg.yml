@@ -1,16 +1,16 @@
 # Artifact Hub package metadata file
 version: 0.1.0
-name: "fsnotify-enricher"
+name: "fsnotify"
 category: monitoring-logging
-displayName: "fsnotify-enricher"
-createdAt: "2024-05-07T14:41:00+01:00"
+displayName: "fsnotify"
+createdAt: "2024-07-24T12:13:00+01:00"
 description: "enrich inotify or fanotify events"
 logoURL: "https://inspektor-gadget.io/media/brand-icon.svg"
 license: ""
-homeURL: "https://github.com/alban/fsnotify-enricher"
+homeURL: "https://inspektor-gadget.io/"
 containersImages:
     - name: gadget
-      image: "ghcr.io/alban/fsnotify-enricher:latest"
+      image: "ghcr.io/inspektor-gadget/gadget/fsnotify:latest"
       platforms:
         - linux/amd64
         - linux/arm64
@@ -18,11 +18,11 @@ keywords:
     - gadget
 links:
     - name: source
-      url: "https://github.com/alban/fsnotify-enricher"
+      url: "https://github.com/inspektor-gadget/inspektor-gadget/"
 install: |
     # Run
     ```bash
-    sudo IG_EXPERIMENTAL=true ig run ghcr.io/alban/fsnotify-enricher:latest
+    sudo IG_EXPERIMENTAL=true ig run ghcr.io/inspektor-gadget/gadget/fsnotify:latest
     ```
 provider:
     name: Inspektor Gadget

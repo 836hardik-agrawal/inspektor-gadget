@@ -1,8 +1,8 @@
-name: fsnotify-enricher
+name: fsnotify
 description: Gadget enriching inotify or fanotify events
-homepageURL: https://github.com/alban/fsnotify-enricher
-documentationURL: https://github.com/alban/fsnotify-enricher
-sourceURL: https://github.com/alban/fsnotify-enricher
+homepageURL: https://inspektor-gadget.io/
+documentationURL: https://inspektor-gadget.io/docs
+sourceURL: https://github.com/inspektor-gadget/inspektor-gadget/
 tracers:
   fsnotify:
     mapName: events
@@ -126,13 +126,13 @@ structs:
         alignment: left
         ellipsis: end
     - name: i_ino
-      description: 'inode of the file accessed by inotify'
+      description: inode of the file accessed by inotify
       attributes:
         width: 10
         alignment: left
         ellipsis: end
     - name: i_ino_dir
-      description: 'inode of the directory containing the file accessed by inotify'
+      description: inode of the directory containing the file accessed by inotify
       attributes:
         width: 10
         alignment: left
