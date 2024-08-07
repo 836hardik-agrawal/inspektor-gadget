@@ -1,6 +1,7 @@
 module github.com/inspektor-gadget/inspektor-gadget
 
-go 1.22.0
+go 1.22.5
+
 require (
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/cilium/ebpf v0.16.0
